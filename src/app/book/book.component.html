@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-5 text-center">
+            <h4>Welcome to Bank <br> </h4>
+        </div>
+    </div>
+    <div class="row mt-3" >
+        <div class="col-2"></div>
+        <div class="col-8 d-flex justify-content-center" >
+<form action="" >
+    <table class="table table-hover " cellpadding="25" cellspacing="25" style="background-color: white; width: 800px;">
+       <thead>
+        <tr>
+            <th>Book Name</th>
+            <th>Author</th>
+            <th>Price</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr></thead>
+        <tbody>
+        <tr *ngFor= "let book of bookList" >
+            <td>{{book.book_name}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.price}}</td>
+            <td>
+                <a routerLink="/update/{{book.id}}">
+                <input type="button" value="Edit"></a></td>
+            <td><input type="button" (click)="dlt(book.id)" value="Delete"></td>
+        </tr>
+    </tbody>
+    </table>
+</form>
+</div>
+<div class="col-2"></div>
+</div>
+<div class="row"> 
+    <br>
+    <br>
+    <form action="">
+        <table class="table shadow mb-4 rounded " cellpadding="25" cellspacing="25" style="background-color: white; ">
+            <tr>
+                <td><input id="bookname" type="text" class="form-control" [(ngModel)]="book_name" name="book_name"   placeholder="Book Name" /></td>
+            </tr>
+            <tr>
+                <td><input id="author" type="text" class="form-control" [(ngModel)]="author" name="author"   placeholder="Author Name" /></td>
+            </tr>
+            <tr>
+                <td><input id="price" type="text" class="form-control" [(ngModel)]="price" name="Price"   placeholder="Price" /></td>
+            </tr>
+            <tr >
+                <td class="p-4"><input type="submit" class="form-control btn btn-primary" style="font-size: 20px;font-weight: bold; background-color: rgb(33, 97, 214);"
+                        value="Create" (click)="crbook()" ></td>
+            </tr>
+            </table>
+
+        
+    </form>
+</div>   
+    </div>
+    

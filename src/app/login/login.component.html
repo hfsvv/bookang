@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-5 text-center">
+            <h4>Welcome to Bank <br> </h4>
+        </div>
+    </div>
+    <div class="row mt-3" >
+        <div class="col-2"></div>
+        <div class="col-8 d-flex justify-content-center" >
+<form action="" >
+    <table class="shadow mb-4 rounded " cellpadding="25" cellspacing="25" style="background-color: white; width: 400px;">
+        <tr>
+            <td><input id="acno" type="text" class="form-control" [(ngModel)]="accno" name="accno"   placeholder="Username" /></td>
+        </tr>
+        <!-- <tr> <div *ngIf="(loginForm.get('accno')?.touched || loginForm.get('accno')?.dirty) && loginForm.get('accno')?.errors" class="error">accno is invalid</div>
+</tr> -->
+        
+        <tr>
+            <td>
+                <input id="pwd" type="password" class="form-control" [(ngModel)]="pswd" name="pswd" placeholder="Password"/>
+            </td>
+        </tr>
+        <!-- <tr> <div *ngIf="(loginForm.get('pswd')?.touched || loginForm.get('pswd')?.dirty) && loginForm.get('pswd')?.errors" class="error">password is invalid</div>
+        </tr>
+         -->
+        <tr >
+            <td class="p-4"><input type="submit" class="form-control btn btn-primary pb-4" style="font-size: 20px;font-weight: bold;"
+                    value="Log In" (click)="login()" ></td>
+        </tr>
+       
+    </table>
+</form>
+</div>
+<div class="col-2"></div>
+</div>
+</div>

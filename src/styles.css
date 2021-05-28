@@ -1,0 +1,6 @@
+/* You can add global styles to this file, and also import other style files */
+.navs a{
+    margin-right: 60px;
+    font-weight: 500;
+    color: seashell;
+}
